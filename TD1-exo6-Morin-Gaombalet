@@ -5,9 +5,9 @@
 int main()
 {
 	int x, y, z;
-	printf("Quel valeur de x voulez-vous ? \n");
+	printf("Quelle valeur de x voulez-vous ? \n");
 	scanf("%d", &x);
-	printf("Quel valeur de y voulez-vous ? \n");
+	printf("Quelle valeur de y voulez-vous ? \n");
 	scanf("%d", &y);
 
 	z = x;   // En C, il est obligatoire de passer par une troisième variable pour en transposer deux, contrairement a Python
