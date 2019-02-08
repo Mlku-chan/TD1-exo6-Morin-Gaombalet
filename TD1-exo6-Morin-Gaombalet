@@ -1,0 +1,48 @@
+// a)
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int x, y, z;
+	printf("Quel valeur de x voulez-vous ? \n");
+	scanf("%d", &x);
+	printf("Quel valeur de y voulez-vous ? \n");
+	scanf("%d", &y);
+
+	z = x;   // En C, il est obligatoire de passer par une troisième variable pour en transposer deux, contrairement a Python
+	x = y;
+	y = z;
+
+	printf(" x = %d \n y = %d \n", x, y); // On montre que les valeurs des variables ont été échangées
+
+	return 0;
+}
+
+
+// b)
+#include <stdlib.h>
+#include <stdlib.h>
+
+int main2()
+{
+    int a,b,c,d,e,x,i;
+    printf("Saisir les valeurs que vous souhaitez transposer : ")
+    scanf("%d", &a);     // l'utilisateur choisit les 5 variables qu'il voudra faire tourner
+    scanf("%d", &b);
+    scanf("%d", &c);
+    scanf("%d", &d);
+    scanf("%d", &e);
+    printf("(%d,%d,%d,%d,%d)\n",a,b,c,d,e);
+    for (i=0; i<7; i++){ // on crée la boucle opérant un tour complet qui se répetera 7 fois
+        x = a;           // on stocke une valeur dans la variable réserve
+        a = e;
+        e = d;
+        d = c;
+        c = b;
+        b = x;           // on réinjecte la valeur stocké sur la dernière variable a transposer
+        printf("(%d,%d,%d,%d,%d)\n",a,b,c,d,e); // a chaque itération de boucle on affiche la nouvelle liste après modification
+
+    }
+    return 0;
+}
